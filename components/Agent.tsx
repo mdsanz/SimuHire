@@ -12,9 +12,9 @@ const Agent = ({ userName }: AgentProps) => {
     const callStatus = CallStatus.INACTIVE;
     const isSpeaking = true;
     const messages = [
-        'Hello, welcome to the interview. Can you please introduce yourself?',
-        "My name is John Doe, nice to meet you"
-    ]
+        "Hello, welcome to the interview. Can you please introduce yourself?",
+        "My name is John Doe, nice to meet you",
+    ];
 
     const lastMessage = messages[messages.length - 1];
 
@@ -52,7 +52,13 @@ const Agent = ({ userName }: AgentProps) => {
             {messages.length > 0 && (
                 <div className="transcript-border">
                     <div className="transcript">
-                        <p key={lastMessage} className={cn('transition-opacity duration-500 opacity-0', 'animate-fadeIn opacity-100')}>
+                        <p
+                            key={lastMessage}
+                            className={cn(
+                                "transition-opacity duration-500 opacity-0",
+                                "animate-fadeIn opacity-100",
+                            )}
+                        >
                             {lastMessage}
                         </p>
                     </div>
